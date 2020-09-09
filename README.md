@@ -1,4 +1,4 @@
-![Netlify Status](https://api.netlify.com/api/v1/badges/3ff4e086-364f-418a-b66e-b877d563b9b9/deploy-status)](https://app.netlify.com/sites/nifty-easley-667aae/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3ff4e086-364f-418a-b66e-b877d563b9b9/deploy-status)](https://app.netlify.com/sites/nifty-easley-667aae/deploys)
 
 # Questionista
 - This application contains questions from different fields
