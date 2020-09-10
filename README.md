@@ -17,6 +17,6 @@
 - I have hosted this application on netlify, [here](https://nifty-easley-667aae.netlify.app) is the link
 
 ### Design Iterations
-- Iteration 1 [x]()
+- Iteration 1 [link](https://www.figma.com/proto/QHDiicuNOMbudR2lEVrei6/Untitled?node-id=3%3A504&scaling=contain)
 - Iteration 2 [x]()
 - Iteration 3 [x]()
