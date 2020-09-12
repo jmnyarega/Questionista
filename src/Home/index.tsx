@@ -32,7 +32,7 @@ const Home = () => {
         </div>
       </div>
       <main className="content">
-        <h2>Customise your questions</h2>
+        <h2 className="content-title">Customise your questions</h2>
       </main>
     </div>
   );

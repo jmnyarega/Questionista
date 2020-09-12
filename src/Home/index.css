@@ -34,11 +34,11 @@ h2 {
 
 .sidebar-img {
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
 }
 
 .sidebar-text {
-  margin: auto 2rem;
+  margin: 10% 2rem;
   text-align: center;
   color: #fff;
 }
@@ -70,6 +70,9 @@ h2 {
   position: absolute;
   left: 30%;
   right: 0;
+  margin: 10% auto;
+}
+
+.content-title {
   text-align: center;
-  margin: 15% auto;
 }
