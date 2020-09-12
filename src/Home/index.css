@@ -51,13 +51,13 @@ h2 {
 .main-bottomleft {
   position: absolute;
   left: 30%;
-  top: calc(100vh - 180px);
+  top: calc(100vh - 110px);
 }
 
 .main-bottomright {
   position: absolute;
   left: 85%;
-  top: calc(100vh - 180px);
+  top: calc(100vh - 110px);
 }
 
 .main-topright {

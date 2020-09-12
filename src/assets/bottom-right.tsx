@@ -1,58 +1,64 @@
 import React from "react";
 
 export const BottomRight = () => (
-  <svg width="183" height="169" viewBox="0 0 183 169" fill="none">
+  <svg
+    width="90"
+    height="100"
+    viewBox="0 0 90 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <rect
-      x="67"
-      y="62"
-      width="48"
-      height="48"
+      x="33"
+      y="40"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
     <rect
-      y="124"
-      width="48"
-      height="48"
+      y="75"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
     <rect
-      x="67"
-      y="124"
-      width="48"
-      height="48"
+      x="35"
+      y="75"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
     <rect
-      x="135"
-      width="48"
-      height="48"
+      x="68"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
     <rect
-      x="135"
-      y="62"
-      width="48"
-      height="48"
+      x="68"
+      y="40"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
     <rect
-      x="135"
-      y="124"
-      width="48"
-      height="48"
+      x="68"
+      y="75"
+      width="24"
+      height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.5"
+      fill-opacity="0.3"
     />
   </svg>
 );
