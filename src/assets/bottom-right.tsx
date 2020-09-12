@@ -1,0 +1,58 @@
+import React from "react";
+
+export const BottomRight = () => (
+  <svg width="183" height="169" viewBox="0 0 183 169" fill="none">
+    <rect
+      x="67"
+      y="62"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+    <rect
+      y="124"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+    <rect
+      x="67"
+      y="124"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+    <rect
+      x="135"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+    <rect
+      x="135"
+      y="62"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+    <rect
+      x="135"
+      y="124"
+      width="48"
+      height="48"
+      rx="6"
+      fill="#6FCF97"
+      fill-opacity="0.5"
+    />
+  </svg>
+);
