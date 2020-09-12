@@ -67,7 +67,7 @@ const Home = () => {
           </AutoComplete>
         </div>
         <div className="content-next">
-          <a href="" className="btn btn-ghost">
+          <a href="/#test" className="btn btn-ghost">
             Next
           </a>
         </div>
