@@ -91,14 +91,15 @@ h2 {
 }
 
 .content-next {
-  float: right;
   margin-top: 5%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ----- Button types -----------------------*/
 .btn {
   text-decoration: none;
-  padding: 0.5em 3em;
+  padding: 0.3em 2em;
   background-color: #27ae60;
   text-align: center;
   color: white;
