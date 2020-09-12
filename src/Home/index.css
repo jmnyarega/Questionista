@@ -51,18 +51,18 @@ h2 {
 .main-bottomleft {
   position: absolute;
   left: 30%;
-  top: calc(100vh - 110px);
+  top: calc(100vh - 90px);
 }
 
 .main-bottomright {
   position: absolute;
-  left: 85%;
-  top: calc(100vh - 110px);
+  left: 90%;
+  top: calc(100vh - 90px);
 }
 
 .main-topright {
   position: absolute;
-  left: 85%;
+  left: 90%;
   top: 0;
 }
 
@@ -70,9 +70,67 @@ h2 {
   position: absolute;
   left: 30%;
   right: 0;
-  margin: 10% auto;
+  width: 50%;
+  margin: 15% auto;
 }
 
 .content-title {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.content-label {
+  display: block;
+}
+
+.content-form {
+  display: grid;
+  place-content: center;
+}
+
+.content-next {
+  float: right;
+  margin-top: 5%;
+}
+
+/* ----- Button types -----------------------*/
+.btn {
+  text-decoration: none;
+  padding: 0.5em 3em;
+  background-color: #27ae60;
+  text-align: center;
+  color: white;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn:link,
+.btn:active,
+.btn:visited,
+.btn:hover {
+  color: white;
+}
+
+.btn:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- Ghost button -----------------------*/
+.btn-ghost {
+  border: 2px solid #27ae60;
+  background-color: transparent;
+}
+
+.btn-ghost:link,
+.btn-ghost:active,
+.btn-ghost:visited,
+.btn-ghost:hover {
+  color: #27ae60;
+}
+
+.btn-ghost:hover {
+  background-color: #27ae60;
+  color: white;
 }

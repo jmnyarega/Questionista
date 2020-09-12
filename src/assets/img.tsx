@@ -2,7 +2,7 @@ import React from "react";
 
 export const Img = () => (
   <svg
-    width="115%"
+    width="160%"
     height="420"
     viewBox="0 0 576 420"
     fill="none"

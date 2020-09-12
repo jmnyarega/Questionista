@@ -1,56 +1,50 @@
 import React from "react";
 
 export const BottomLeft = () => (
-  <svg
-    width="90"
-    height="100"
-    viewBox="0 0 90 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
     <rect
-      x="33"
-      y="61"
+      x="27"
+      y="54"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      y="62"
+      y="54"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      y="31"
+      y="27"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      x="33"
-      y="31"
+      x="27"
+      y="27"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      x="65"
-      y="62"
+      x="54"
+      y="54"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
-    <rect width="24" height="24" rx="6" fill="#6FCF97" fill-opacity="0.3" />
+    <rect width="24" height="24" rx="6" fill="#6FCF97" fill-opacity="0.2" />
   </svg>
 );

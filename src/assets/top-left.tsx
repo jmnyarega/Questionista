@@ -1,51 +1,45 @@
 import React from "react";
 
 export const TopLeft = () => (
-  <svg
-    width="90"
-    height="100"
-    viewBox="0 0 90 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
     <rect
-      y="36"
+      y="27"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      y="70"
+      y="54"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
-    <rect width="24" height="24" rx="6" fill="#6FCF97" fill-opacity="0.5" />
+    <rect width="24" height="24" rx="6" fill="#6FCF97" fill-opacity="0.2" />
     <rect
-      x="36"
-      y="36"
+      x="27"
+      y="27"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <path
-      d="M34 6C34 2.68629 36.6863 0 40 0H52C55.3137 0 58 2.68629 58 6V18C58 21.3137 55.3137 24 52 24H40C36.6863 24 34 21.3137 34 18V6Z"
+      d="M27 6C27 2.68629 29.6863 0 33 0H45C48.3137 0 51 2.68629 51 6V18C51 21.3137 48.3137 24 45 24H33C29.6863 24 27 21.3137 27 18V6Z"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
     <rect
-      x="70"
+      x="54"
       width="24"
       height="24"
       rx="6"
       fill="#6FCF97"
-      fill-opacity="0.3"
+      fill-opacity="0.2"
     />
   </svg>
 );
