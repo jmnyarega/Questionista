@@ -13,9 +13,6 @@ function App() {
     <div className="container">
       <Home />
       <Switch>
-        <Route path="/topic">
-          <Topic />
-        </Route>
         <Route path="/type">
           <Type />
         </Route>
@@ -27,6 +24,9 @@ function App() {
         </Route>
         <Route path="/start">
           <Start />
+        </Route>
+        <Route path="/topic">
+          <Topic />
         </Route>
       </Switch>
     </div>
