@@ -25,7 +25,7 @@ function App() {
         <Route path="/start">
           <Start />
         </Route>
-        <Route path="/topic">
+        <Route path="/">
           <Topic />
         </Route>
       </Switch>
