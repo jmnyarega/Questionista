@@ -6,6 +6,7 @@ import Utils from "../../utils/js";
 import "./index.css";
 
 const Topic = () => {
+  const customize = JSON.parse(localStorage.getItem("customize") || "{}");
   useEffect(() => {
     axios
       .get("https://opentdb.com/api_category.php")
@@ -16,7 +17,12 @@ const Topic = () => {
       });
   }, []);
   const [options, setOptions] = useState([{ options: [] }]);
-  const [topic, setTopic] = useState(0);
+  const [topic, setTopic] = useState(
+    (customize && customize.topic && customize.topic.id) || 0
+  );
+  const [topicName, setTopicName] = useState(
+    (customize && customize.topic && customize.topic.name) || 0
+  );
 
   const onChange = (name: string) => {
     const topic =
@@ -25,10 +31,15 @@ const Topic = () => {
       options[0].options.find((opt: { value: string }) => opt.value === name)
         .id;
     setTopic(topic);
+    setTopicName(name);
   };
 
   const selectTopic = () => {
-    return topic;
+    const data = JSON.stringify({
+      ...customize,
+      topic: { id: topic, name: topicName },
+    });
+    localStorage.setItem("customize", data);
   };
 
   return (
@@ -43,6 +54,7 @@ const Topic = () => {
           dropdownClassName="certain-category-search-dropdown"
           options={options}
           onChange={onChange}
+          defaultValue={topicName}
           id="category"
         >
           <Input.Search size="large" placeholder="Select Question Type" />

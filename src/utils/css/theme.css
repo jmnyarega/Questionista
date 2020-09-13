@@ -19,5 +19,6 @@ h2 {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
-

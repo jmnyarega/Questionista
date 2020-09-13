@@ -5,19 +5,24 @@ import Utils from "../../utils/js";
 import "./index.css";
 
 const Type = () => {
+  const customize = JSON.parse(localStorage.getItem("customize") || "{}");
   const typeOptions = [
     { name: "multiple", id: 1 },
     { name: "boolean", id: 2 },
   ];
   const data = Utils.format(typeOptions, "Type");
-  const [type, setType] = useState("");
+  const [type, setType] = useState((customize && customize.type) || 0);
 
-  const onChange = () => {
+  const onChange = (type: string) => {
     setType(type);
   };
 
   const selectType = () => {
-    return type;
+    const data = JSON.stringify({
+      ...customize,
+      type,
+    });
+    localStorage.setItem("customize", data);
   };
 
   return (
@@ -32,6 +37,7 @@ const Type = () => {
           dropdownClassName="certain-category-search-dropdown"
           options={data}
           onChange={onChange}
+          defaultValue={type}
           id="type"
         >
           <Input.Search size="large" placeholder="Select Type" />

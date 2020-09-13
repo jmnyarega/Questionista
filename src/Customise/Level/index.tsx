@@ -10,15 +10,20 @@ const Level = () => {
     { name: "medium", id: 2 },
     { name: "hard", id: 3 },
   ];
+  const customize = JSON.parse(localStorage.getItem("customize") || "{}");
   const data = Utils.format(levelOptions, "Level");
-  const [level, setLevel] = useState("");
+  const [level, setLevel] = useState(customize && customize.level);
 
-  const onChange = () => {
+  const onChange = (level: string) => {
     setLevel(level);
   };
 
   const selectLevel = () => {
-    return level;
+    const data = JSON.stringify({
+      ...customize,
+      level,
+    });
+    localStorage.setItem("customize", data);
   };
 
   return (
@@ -33,6 +38,7 @@ const Level = () => {
           dropdownClassName="certain-category-search-dropdown"
           options={data}
           onChange={onChange}
+          defaultValue={level}
           id="category"
         >
           <Input.Search size="large" placeholder="Select Question Level" />
@@ -40,7 +46,7 @@ const Level = () => {
       </div>
       <div className="content-btn__container">
         <div className="content-next">
-          <Link to={{ pathname: "/topic" }} className="btn btn-ghost">
+          <Link to={{ pathname: "/type" }} className="btn btn-ghost">
             Previous
           </Link>
         </div>
