@@ -16,7 +16,6 @@ const Start = () => {
         `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${level}&type=${type}`
       )
       .then((response: any) => {
-        console.log(response);
         const newData = {
           ...customize,
           questions: response.data.results,

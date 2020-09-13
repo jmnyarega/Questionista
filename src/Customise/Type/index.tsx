@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Input, AutoComplete } from "antd";
 import Utils from "../../utils/js";
-import "./index.css";
 
 const Type = () => {
   const customize = JSON.parse(localStorage.getItem("customize") || "{}");

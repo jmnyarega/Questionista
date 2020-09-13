@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { InputNumber, Form } from "antd";
 import { Link } from "react-router-dom";
-import "./index.css";
 
 const Count = () => {
   const customize = JSON.parse(localStorage.getItem("customize") || "{}");

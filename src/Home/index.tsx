@@ -7,8 +7,7 @@ import { BottomLeft } from "../assets/bottom-left";
 import { TopRight } from "../assets/top-right";
 import "./index.css";
 
-const Home = (props: any) => {
-  console.log(props);
+const Home = () => {
   return (
     <React.Fragment>
       <aside className="sidebar">
