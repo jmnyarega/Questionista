@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3ff4e086-364f-418a-b66e-b877d563b9b9/deploy-status)](https://app.netlify.com/sites/nifty-easley-667aae/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3ff4e086-364f-418a-b66e-b877d563b9b9/deploy-status)](https://app.netlify.com/sites/questionsista/deploys)
 
 # Questionista
 - This application contains questions from different fields
@@ -14,7 +14,7 @@
 - The _npm_start_ command with open the application on your default browser using [this](http://localhost:3000) url
 
 ### Running the application using online link
-- I have hosted this application on netlify, [here](https://nifty-easley-667aae.netlify.app) is the link
+- I have hosted this application on netlify, [here](https://questionsista.netlify.app) is the link
 
 ### Design Iterations
 - Iteration 1 [link](https://www.figma.com/proto/QHDiicuNOMbudR2lEVrei6/Untitled?node-id=3%3A504&scaling=contain)
