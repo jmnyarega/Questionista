@@ -1,0 +1,40 @@
+/* ----- Button types -----------------------*/
+.btn {
+  text-decoration: none;
+  padding: 0.3em 1.5em;
+  background-color: #27ae60;
+  text-align: center;
+  color: white;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn:link,
+.btn:active,
+.btn:visited,
+.btn:hover {
+  color: white;
+}
+
+.btn:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- Ghost button -----------------------*/
+.btn-ghost {
+  border: 2px solid #27ae60;
+  background-color: transparent;
+}
+
+.btn-ghost:link,
+.btn-ghost:active,
+.btn-ghost:visited,
+.btn-ghost:hover {
+  color: #27ae60;
+}
+
+.btn-ghost:hover {
+  background-color: #27ae60;
+  color: white;
+}
