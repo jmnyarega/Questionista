@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { InputNumber, Form } from "antd";
+import { InputNumber } from "antd";
 import { Link } from "react-router-dom";
 
 const Count = () => {
   const customize = JSON.parse(localStorage.getItem("customize") || "{}");
   const [count, setCount] = useState(customize && customize.number);
-  const FormItem = Form.Item;
 
   const onChange = (count: any) => {
     setCount(count);
@@ -27,15 +26,13 @@ const Count = () => {
         <label htmlFor="category" className="content-label">
           Select <strong> number </strong> of questions you want to answer
         </label>
-        <FormItem hasFeedback validateStatus="success">
-          <InputNumber
-            style={{ width: "100%" }}
-            className="content-form__count"
-            placeholder="Select number of questions"
-            onChange={onChange}
-            defaultValue={count}
-          />
-        </FormItem>
+        <InputNumber
+          style={{ width: "100%" }}
+          className="content-form__count"
+          placeholder="Select number of questions"
+          onChange={onChange}
+          defaultValue={count}
+        />
       </div>
       <div className="content-btn__container">
         <div className="content-next">

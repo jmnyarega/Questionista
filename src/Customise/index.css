@@ -21,6 +21,16 @@
   place-content: center;
 }
 
+.content-next {
+  margin-top: 5%;
+}
+
+.content-form__count,
+.ant-input-number-input {
+  height: 40px !important;
+  padding: 50% 0;
+}
+
 .content-btn__container {
   display: flex;
   justify-content: space-between;
