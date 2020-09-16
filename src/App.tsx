@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Type, Level, Count, Home, Start, Topic } from "./Customise";
+import Question from "./Questions";
 
 import "./Customise/Topic/index.css";
 
@@ -12,15 +13,23 @@ function App() {
         <Route path="/type">
           <Type />
         </Route>
+
         <Route path="/level">
           <Level />
         </Route>
+
         <Route path="/count">
           <Count />
         </Route>
+
         <Route path="/start">
           <Start />
         </Route>
+
+        <Route path="/question/:question">
+          <Question />
+        </Route>
+
         <Route path="/">
           <Topic />
         </Route>

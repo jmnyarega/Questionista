@@ -23,3 +23,12 @@ h2 {
   overflow: hidden;
 }
 
+@media (max-width: 600px) {
+  html {
+    display: none;
+  }
+
+  html::after {
+    content: "Display Screen less than 500px";
+  }
+}
