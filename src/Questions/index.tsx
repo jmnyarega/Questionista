@@ -14,7 +14,10 @@ const Questions = () => {
   return (
     <main className="content">
       <div className="content-question__container">
-        <h2 dangerouslySetInnerHTML={question(currentQuestion.question)} />
+        <h2
+          className="content-title title-small"
+          dangerouslySetInnerHTML={question(currentQuestion.question)}
+        />
       </div>
       <div className="content-btn__container">
         <div className="cta">

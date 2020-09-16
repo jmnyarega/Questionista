@@ -33,11 +33,11 @@ const Start = () => {
   return (
     <main className="content">
       {!loading && availableQuesstions.questions.length ? (
-        <h2 className="content-title">
+        <h2 className="content-title title-medium">
           Congratulations, your questions are now ready
         </h2>
       ) : (
-        <h2 className="content-title">
+        <h2 className="content-title title-medium">
           {loading
             ? "Getting the questions..."
             : "There are no questions found, kindly adjust your parameters"}

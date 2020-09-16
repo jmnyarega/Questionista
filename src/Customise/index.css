@@ -9,8 +9,15 @@
 .content-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 5rem;
   height: 100px;
+}
+
+.title-medium {
+  font-size: 2rem;
+}
+
+.title-small {
+  font-size: 1.7rem;
 }
 
 .content-label {
