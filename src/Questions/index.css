@@ -45,6 +45,7 @@
 .wrong:hover,
 .wrong:focus {
   color: white;
+  border: 1px solid #ff0000;
   background-color: #ff0000;
 }
 
@@ -57,6 +58,7 @@
 .correct:hover,
 .correct:focus {
   color: white;
+  border: 1px solid #18d937;
   background-color: #18d937;
 }
 

@@ -8,8 +8,7 @@ const Questions = () => {
   const { question: index } = useParams();
   const currentQuestion = questions[index];
 
-  const [correct, setCorrect] = useState(Utils.choices(questions, index)[1]);
-  const [answers, setAnswer] = useState(Utils.choices(questions, index)[0]);
+  const [answers, setAnswer] = useState(Utils.choices(questions, index));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState();
   const [clickedIndex, setClickedIndex] = useState(-1);
@@ -20,13 +19,12 @@ const Questions = () => {
 
   const checkAnswer = (_: MouseEvent, answer: number) => {
     setClickedIndex(answer);
-    setIsCorrect(answer === correct);
+    setIsCorrect(answers[answer] === currentQuestion.correct_answer);
   };
 
   useEffect(() => {
     if (currentIndex !== index) {
-      setCorrect(Utils.choices(questions, index)[1]);
-      setAnswer(Utils.choices(questions, index)[0]);
+      setAnswer(Utils.choices(questions, index));
       setClickedIndex(-1);
     }
     setCurrentIndex(index);

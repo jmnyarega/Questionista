@@ -21,7 +21,7 @@ class Utils {
     const organised = Array.from(organise);
     //@ts-ignore
     const shuffled = organised.map((index: number): any => allAnswers[index]);
-    return [shuffled, shuffled.indexOf(correct)];
+    return shuffled;
   };
 }
 
