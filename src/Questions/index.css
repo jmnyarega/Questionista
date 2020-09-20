@@ -13,7 +13,7 @@
 }
 
 .question-title span {
-  font-size: 2rem;
+  font-size: 2.2rem;
   float: left;
   padding-right: 1rem;
   font-weight: 900;
@@ -26,7 +26,7 @@
 
 .badge {
   background-color: #009653;
-  padding: 0.5rem 3rem;
+  padding: 0.3rem 2rem;
   display: inline-block;
   margin-left: 1rem;
   border-radius: 0.4rem;
