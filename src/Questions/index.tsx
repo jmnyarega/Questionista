@@ -19,6 +19,10 @@ const Questions = () => {
     return { __html: `<span> ${index}. </span> ${question}` };
   };
 
+  const formatAnswer = (answer: string) => {
+    return { __html: answer };
+  };
+
   const checkAnswer = (_: MouseEvent, answer: number) => {
     setClickedIndex(answer);
     setIsCorrect(answers[answer] === currentQuestion.correct_answer);
@@ -60,7 +64,7 @@ const Questions = () => {
             disabled={clickedIndex >= 0}
             onClick={(e) => checkAnswer(e, i)}
           >
-            <span dangerouslySetInnerHTML={question(answer)} />
+            <span dangerouslySetInnerHTML={formatAnswer(answer)} />
           </button>
         </div>
       ))}

@@ -17,6 +17,7 @@
   float: left;
   padding-right: 1rem;
   font-weight: 900;
+  font-family: "Lobster", cursive;
 }
 
 .content-question__badges {
@@ -26,7 +27,7 @@
 
 .badge {
   background-color: #009653;
-  padding: 0.3rem 2rem;
+  padding: 0.2rem 1rem;
   display: inline-block;
   margin-left: 1rem;
   border-radius: 0.4rem;
