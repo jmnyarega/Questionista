@@ -7,6 +7,7 @@ import "./index.css";
 
 const Topic = () => {
   const customize = JSON.parse(localStorage.getItem("customize") || "{}");
+  document.documentElement.style.setProperty("--percentage", "0");
   useEffect(() => {
     axios
       .get("https://opentdb.com/api_category.php")
@@ -38,6 +39,7 @@ const Topic = () => {
     const data = JSON.stringify({
       ...customize,
       topic: { id: topic, name: topicName },
+      percentage: 0,
     });
     localStorage.setItem("customize", data);
   };

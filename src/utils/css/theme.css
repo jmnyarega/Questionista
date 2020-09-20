@@ -1,3 +1,7 @@
+:root {
+  --percentage: 0%;
+}
+
 *,
 *::before,
 *::after {

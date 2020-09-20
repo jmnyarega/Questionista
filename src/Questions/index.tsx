@@ -4,9 +4,13 @@ import Utils from "../utils/js";
 import "./index.css";
 
 const Questions = () => {
-  const { questions, level, type, topic } = JSON.parse(
-    localStorage.getItem("customize") || "{}"
-  );
+  const {
+    questions,
+    level,
+    type,
+    topic,
+    percentage: curPercentage,
+  } = JSON.parse(localStorage.getItem("customize") || "{}");
   const { question: index } = useParams();
   const currentQuestion = questions[index];
 
@@ -14,6 +18,9 @@ const Questions = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState();
   const [clickedIndex, setClickedIndex] = useState(-1);
+  const [percentage, setPercentage] = useState(curPercentage);
+
+  document.documentElement.style.setProperty("--percentage", `${percentage}%`);
 
   const question = (question: string) => {
     return { __html: `<span> ${index}. </span> ${question}` };
@@ -26,6 +33,12 @@ const Questions = () => {
   const checkAnswer = (_: MouseEvent, answer: number) => {
     setClickedIndex(answer);
     setIsCorrect(answers[answer] === currentQuestion.correct_answer);
+    setPercentage(index / questions.length);
+    const data = JSON.stringify({
+      ...JSON.parse(localStorage.getItem("customize") || "{}"),
+      percentage,
+    });
+    localStorage.setItem("customize", data);
   };
 
   useEffect(() => {
@@ -40,6 +53,9 @@ const Questions = () => {
   return (
     <main className="content">
       <div className="content-question__container">
+        <div className="content-question__progressbar">
+          <span className="progress">{percentage * 100}% </span>
+        </div>
         <div className="content-question__badges">
           <span className="badge badge__type">{type}</span>
           <span className="badge badge__level">{level}</span>
