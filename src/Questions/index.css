@@ -9,6 +9,28 @@
 .question-title {
   height: 0;
   padding-bottom: 2rem;
+  text-align: initial;
+}
+
+.question-title span {
+  font-size: 2rem;
+  float: left;
+  padding-right: 1rem;
+  font-weight: 900;
+}
+
+.content-question__badges {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.badge {
+  background-color: #009653;
+  padding: 0.5rem 3rem;
+  display: inline-block;
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+  color: white;
 }
 
 .content-answers {
@@ -66,4 +88,3 @@
   font-family: "Font Awesome 5 Free";
   content: "\f058";
 }
-

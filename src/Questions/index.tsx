@@ -4,7 +4,9 @@ import Utils from "../utils/js";
 import "./index.css";
 
 const Questions = () => {
-  const { questions } = JSON.parse(localStorage.getItem("customize") || "{}");
+  const { questions, level, type, topic } = JSON.parse(
+    localStorage.getItem("customize") || "{}"
+  );
   const { question: index } = useParams();
   const currentQuestion = questions[index];
 
@@ -14,7 +16,7 @@ const Questions = () => {
   const [clickedIndex, setClickedIndex] = useState(-1);
 
   const question = (question: string) => {
-    return { __html: question };
+    return { __html: `<span> ${index}. </span> ${question}` };
   };
 
   const checkAnswer = (_: MouseEvent, answer: number) => {
@@ -34,6 +36,11 @@ const Questions = () => {
   return (
     <main className="content">
       <div className="content-question__container">
+        <div className="content-question__badges">
+          <span className="badge badge__type">{type}</span>
+          <span className="badge badge__level">{level}</span>
+          <span className="badge badge__music">{topic.name.split(":")[0]}</span>
+        </div>
         <h2
           className="content-title title-small question-title"
           dangerouslySetInnerHTML={question(currentQuestion.question)}
