@@ -20,7 +20,10 @@ const Questions = () => {
   const [clickedIndex, setClickedIndex] = useState(-1);
   const [percentage, setPercentage] = useState(curPercentage);
 
-  document.documentElement.style.setProperty("--percentage", `${percentage}%`);
+  document.documentElement.style.setProperty(
+    "--percentage",
+    `${percentage * 100}%`
+  );
 
   const question = (question: string) => {
     return { __html: `<span> ${index}. </span> ${question}` };
@@ -54,7 +57,7 @@ const Questions = () => {
     <main className="content">
       <div className="content-question__container">
         <div className="content-question__progressbar">
-          <span className="progress">{percentage * 100}% </span>
+          <span className="progress">{(percentage * 100).toFixed(0)}% </span>
         </div>
         <div className="content-question__badges">
           <span className="badge badge__type">{type}</span>

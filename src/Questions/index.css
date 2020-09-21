@@ -35,12 +35,12 @@
 .content-question__progressbar span {
   background: repeating-linear-gradient(
     45deg,
-    #061b11,
-    #061b11 10px,
-    #6c63ff 10px,
-    #6c63ff 20px
+    #2f2e41,
+    #2f2e41 10px,
+    #27ae60 10px,
+    #27ae60 20px
   );
-  width: calc(var(--percentage) * 100);
+  width: var(--percentage);
   height: 25px;
   border-radius: 0.1rem;
   text-align: center;
@@ -49,6 +49,7 @@
   padding-left: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .badge {
