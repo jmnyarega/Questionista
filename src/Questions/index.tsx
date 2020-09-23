@@ -110,7 +110,11 @@ const Questions = () => {
           </Link>
         )}
         {Number(index) === questions.length - 1 && clickedIndex >= 0 && (
-          <Link to={{ pathname: `/summary` }} className="btn btn-ghost">
+          <Link
+            to={{ pathname: `/summary` }}
+            className="btn btn-ghost"
+            onClick={confirmNumbers}
+          >
             Submit
           </Link>
         )}
