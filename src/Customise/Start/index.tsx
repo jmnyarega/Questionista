@@ -46,7 +46,7 @@ const Start = () => {
 
       <div className="content-start">
         {!loading && availableQuesstions.questions.length ? (
-          <Link to={{ pathname: "/question/1" }} className="btn">
+          <Link to={{ pathname: "/question/0" }} className="btn">
             Get Started
           </Link>
         ) : (
