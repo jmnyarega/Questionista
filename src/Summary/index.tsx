@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Repeat from "../assets/repeat";
 import "./index.css";
 
@@ -11,13 +12,13 @@ const Questions = () => {
       <h1 className="title-medium summary-titles__score">
         Your score is {((score / count) * 100).toFixed(0)}%
       </h1>
-      <a href="/question/0">
+      <Link to="/question/0">
         <Repeat />
-      </a>
+      </Link>
       <h2 className="title-small summary-title__repeat">Repeat test</h2>
-      <a href="/" className="btn btn-ghost">
+      <Link to="/" className="btn btn-ghost">
         Customise Questions
-      </a>
+      </Link>
     </main>
   );
 };
