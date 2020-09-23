@@ -17,8 +17,9 @@ const Questions = () => {
   const [answers, setAnswer] = useState(Utils.choices(questions, index));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState();
-  const [clickedIndex, setClickedIndex] = useState(-1);
+  const [clickedIndex, setClickedIndex] = useState(0);
   const [percentage, setPercentage] = useState(curPercentage);
+  const [currentScore, setScore] = useState(0);
 
   document.documentElement.style.setProperty(
     "--percentage",
@@ -26,7 +27,7 @@ const Questions = () => {
   );
 
   const question = (question: string) => {
-    return { __html: `<span> ${index}. </span> ${question}` };
+    return { __html: `<span> ${Number(index) + 1}. </span> ${question}` };
   };
 
   const formatAnswer = (answer: string) => {
@@ -34,12 +35,18 @@ const Questions = () => {
   };
 
   const checkAnswer = (_: MouseEvent, answer: number) => {
+    const correct = answers[answer] === currentQuestion.correct_answer;
     setClickedIndex(answer);
-    setIsCorrect(answers[answer] === currentQuestion.correct_answer);
-    setPercentage(index / questions.length);
+    setIsCorrect(correct);
+    setPercentage((Number(index) + 1) / questions.length);
+    correct && setScore(currentScore + 1);
+  };
+
+  const confirmNumbers = () => {
     const data = JSON.stringify({
       ...JSON.parse(localStorage.getItem("customize") || "{}"),
       percentage,
+      score: currentScore,
     });
     localStorage.setItem("customize", data);
   };
@@ -48,6 +55,11 @@ const Questions = () => {
     if (currentIndex !== index) {
       setAnswer(Utils.choices(questions, index));
       setClickedIndex(-1);
+    }
+    if (Number(index) === 0) {
+      setScore(0);
+      setPercentage(0.1);
+      confirmNumbers();
     }
     setCurrentIndex(index);
     // eslint-disable-next-line
@@ -92,12 +104,13 @@ const Questions = () => {
           <Link
             to={{ pathname: `/question/${Number(index) + 1}` }}
             className="btn btn-ghost"
+            onClick={confirmNumbers}
           >
             Next
           </Link>
         )}
         {Number(index) === questions.length - 1 && clickedIndex >= 0 && (
-          <Link to={{ pathname: `/results` }} className="btn btn-ghost">
+          <Link to={{ pathname: `/summary` }} className="btn btn-ghost">
             Submit
           </Link>
         )}

@@ -40,6 +40,7 @@ const Topic = () => {
       ...customize,
       topic: { id: topic, name: topicName },
       percentage: 0,
+      score: 0,
     });
     localStorage.setItem("customize", data);
   };

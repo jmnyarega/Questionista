@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Type, Level, Count, Home, Start, Topic } from "./Customise";
 import Question from "./Questions";
+import Summary from "./Summary";
 
 import "./Customise/Topic/index.css";
 
@@ -24,6 +25,10 @@ function App() {
 
         <Route path="/start">
           <Start />
+        </Route>
+
+        <Route path="/summary">
+          <Summary />
         </Route>
 
         <Route path="/question/:question">
