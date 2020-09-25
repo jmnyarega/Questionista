@@ -76,9 +76,10 @@
   cursor: pointer;
   background-color: #fff;
   margin: 0.5rem 0;
-  border: 1px solid #c4c4c4;
+  border: 3px solid #c4c4c4;
+  box-sizing: border-box;
   width: 100%;
-  border-radius: 999rem;
+  border-radius: 0.4rem;
   padding: 1rem 1rem 1rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -108,7 +109,7 @@
 .correct:hover,
 .correct:focus {
   color: white;
-  border: 1px solid #18d937;
+  border: 3px solid #18d937;
   background-color: #18d937;
 }
 
