@@ -4,12 +4,15 @@
 
 .cta {
   float: right;
+  padding-top: 2rem;
 }
 
 .question-title {
-  max-height: 12.5rem;
+  max-height: 7.5rem;
   overflow-y: hidden;
   text-align: initial;
+  font-size: medium;
+  line-height: 1.7;
 }
 
 .content-title {
@@ -64,7 +67,7 @@
 }
 
 .content-answers {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 }
 

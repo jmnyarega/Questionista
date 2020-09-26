@@ -104,7 +104,7 @@ const Questions = () => {
         {index < questions.length - 1 && clickedIndex >= 0 && (
           <Link
             to={{ pathname: `/question/${Number(index) + 1}` }}
-            className="btn btn-ghost"
+            className="btn btn-ghost content-btn"
             onClick={confirmNumbers}
           >
             Next
@@ -113,7 +113,7 @@ const Questions = () => {
         {Number(index) === questions.length - 1 && clickedIndex >= 0 && (
           <Link
             to={{ pathname: `/summary` }}
-            className="btn btn-ghost"
+            className="btn btn-ghost content-btn"
             onClick={confirmNumbers}
           >
             Submit

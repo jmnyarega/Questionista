@@ -63,4 +63,16 @@ h2 {
   .content-answers {
     width: 100%;
   }
+
+  .container {
+    overflow-y: initial;
+  }
+
+  .cta {
+    float: none;
+  }
+
+  .content-btn {
+    width: 100%;
+  }
 }
