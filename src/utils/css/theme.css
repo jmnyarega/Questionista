@@ -27,12 +27,40 @@ h2 {
   overflow: hidden;
 }
 
-@media (max-width: 600px) {
-  html {
+@media (max-width: 850px) {
+  .content {
+    position: initial;
+    width: 90%;
+    margin: 15% auto;
+  }
+
+  .sidebar {
     display: none;
   }
 
-  html::after {
-    content: "Display Screen less than 500px";
+  .main-topleft,
+  .main-bottomleft,
+  .main-bottomright,
+  .main-topright {
+    display: none;
+  }
+
+  .content-question__badges {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    font-size: 0.7rem;
+  }
+
+  .question-title {
+    text-align: center;
+  }
+
+  .question-title__number {
+    display: none;
+  }
+
+  .content-answers {
+    width: 100%;
   }
 }

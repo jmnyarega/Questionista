@@ -26,12 +26,8 @@ const Questions = () => {
     `${percentage * 100}%`
   );
 
-  const question = (question: string) => {
-    return { __html: `<span> ${Number(index) + 1}. </span> ${question}` };
-  };
-
-  const formatAnswer = (answer: string) => {
-    return { __html: answer };
+  const dangerouslyFormat = (content: string) => {
+    return { __html: content };
   };
 
   const checkAnswer = (_: MouseEvent, answer: number) => {
@@ -58,7 +54,7 @@ const Questions = () => {
     }
     if (Number(index) === 0) {
       setScore(0);
-      setPercentage(0.1);
+      setPercentage(1 / questions.length);
       confirmNumbers();
     }
     setCurrentIndex(index);
@@ -69,36 +65,41 @@ const Questions = () => {
     <main className="content">
       <div className="content-question__container">
         <div className="content-question__progressbar">
-          <span className="progress">{(percentage * 100).toFixed(0)}% </span>
+          <span className="progress" />
         </div>
         <div className="content-question__badges">
           <span className="badge badge__type">{type}</span>
           <span className="badge badge__level">{level}</span>
           <span className="badge badge__music">{topic.name.split(":")[0]}</span>
         </div>
-        <h2
-          className="content-title title-small question-title"
-          dangerouslySetInnerHTML={question(currentQuestion.question)}
-        />
-      </div>
-
-      {answers.map((answer: any, i: number) => (
-        <div className="content-answers">
-          <button
-            className={`content-answer ${
-              isCorrect === true && i === clickedIndex
-                ? "correct"
-                : isCorrect === false && i === clickedIndex
-                ? "wrong"
-                : "no answer"
-            }`}
-            disabled={clickedIndex >= 0}
-            onClick={(e) => checkAnswer(e, i)}
-          >
-            <span dangerouslySetInnerHTML={formatAnswer(answer)} />
-          </button>
+        <div className="content-title__container">
+          <h2
+            className="content-title title-small question-title"
+            dangerouslySetInnerHTML={dangerouslyFormat(
+              currentQuestion.question
+            )}
+          />
         </div>
-      ))}
+      </div>
+      <div className="content-answers__container">
+        {answers.map((answer: any, i: number) => (
+          <div className="content-answers">
+            <button
+              className={`content-answer ${
+                isCorrect === true && i === clickedIndex
+                  ? "correct"
+                  : isCorrect === false && i === clickedIndex
+                  ? "wrong"
+                  : "no answer"
+              }`}
+              disabled={clickedIndex >= 0}
+              onClick={(e) => checkAnswer(e, i)}
+            >
+              <span dangerouslySetInnerHTML={dangerouslyFormat(answer)} />
+            </button>
+          </div>
+        ))}
+      </div>
       <div className="cta">
         {index < questions.length - 1 && clickedIndex >= 0 && (
           <Link

@@ -1,5 +1,5 @@
 .content-question__container {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .cta {
@@ -7,9 +7,13 @@
 }
 
 .question-title {
-  height: 0;
-  padding-bottom: 2rem;
+  max-height: 12.5rem;
+  overflow-y: hidden;
   text-align: initial;
+}
+
+.content-title {
+  height: initial;
 }
 
 .question-title span {
@@ -21,14 +25,16 @@
 }
 
 .content-question__badges {
-  width: 75%;
-  margin: 1rem auto;
+  width: 95%;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  font-size: 0.7rem;
 }
 
 .content-question__progressbar {
   background-color: #dcdcdc;
   width: 100%;
-  height: 25px;
+  height: 10px;
   border-radius: 0.1rem;
 }
 
@@ -41,24 +47,20 @@
     #27ae60 20px
   );
   width: var(--percentage);
-  height: 25px;
   border-radius: 0.1rem;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  padding-left: 10px;
+  height: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .badge {
   background-color: #009653;
-  padding: 0.2rem 1rem;
-  display: inline-block;
+  padding: 0.2rem 0.5rem;
   margin-left: 1rem;
   border-radius: 0.4rem;
   color: white;
+  display: flex;
+  align-content: center;
 }
 
 .content-answers {
@@ -77,10 +79,9 @@
   background-color: #fff;
   margin: 0.5rem 0;
   border: 3px solid #c4c4c4;
-  box-sizing: border-box;
   width: 100%;
   border-radius: 0.4rem;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
 }
