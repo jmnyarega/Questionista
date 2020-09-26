@@ -97,7 +97,7 @@
 .wrong:hover,
 .wrong:focus {
   color: white;
-  border: 1px solid #ff0000;
+  border: 3px solid #ff0000;
   background-color: #ff0000;
 }
 
