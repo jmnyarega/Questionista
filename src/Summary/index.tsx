@@ -16,7 +16,7 @@ const Questions = () => {
         <Repeat />
       </Link>
       <h2 className="title-small summary-title__repeat">Repeat test</h2>
-      <Link to="/" className="btn btn-ghost">
+      <Link to="/" className="btn">
         Customise Questions
       </Link>
     </main>

@@ -64,11 +64,7 @@ const Topic = () => {
         </AutoComplete>
       </div>
       <div className="content-next">
-        <Link
-          to={{ pathname: "/type" }}
-          onClick={selectTopic}
-          className="btn btn-ghost"
-        >
+        <Link to={{ pathname: "/type" }} onClick={selectTopic} className="btn">
           Next
         </Link>
       </div>

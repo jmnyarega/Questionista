@@ -52,7 +52,7 @@ const Type = () => {
           <Link
             to={{ pathname: "/level" }}
             onClick={selectType}
-            className="btn btn-ghost"
+            className="btn"
           >
             Next
           </Link>

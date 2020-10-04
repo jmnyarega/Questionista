@@ -43,7 +43,7 @@ const Count = () => {
           <Link
             to={{ pathname: "/start" }}
             onClick={selectCount}
-            className="btn btn-ghost"
+            className="btn"
           >
             Next
           </Link>

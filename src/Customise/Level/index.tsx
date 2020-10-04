@@ -54,7 +54,7 @@ const Level = () => {
           <Link
             to={{ pathname: "/count" }}
             onClick={selectLevel}
-            className="btn btn-ghost"
+            className="btn"
           >
             Next
           </Link>

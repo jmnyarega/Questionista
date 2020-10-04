@@ -1,12 +1,12 @@
 /* ----- Button types -----------------------*/
 .btn {
   text-decoration: none;
-  padding: 0.3em 1.5em;
+  padding: 0.9rem 1.5rem;
   background-color: #27ae60;
   text-align: center;
   color: white;
   border-radius: 0.3em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: inline-block;
 }
 
