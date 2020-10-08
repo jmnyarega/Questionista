@@ -26,6 +26,11 @@ const Questions = () => {
     }
   }
 
+  if (index > Object.keys(savedAnswers).length) {
+    window.location.href = `#/question/${Object.keys(savedAnswers).length}`;
+    window.location.reload();
+  }
+
   const currentQuestion = questions[index];
 
   const [answers, setAnswer] = useState(Utils.choices(questions, index));
