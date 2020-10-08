@@ -7,11 +7,25 @@ const Questions = () => {
   const {
     questions,
     level,
+    answers: savedAnswers,
     type,
     topic,
     percentage: curPercentage,
   } = JSON.parse(localStorage.getItem("customize") || "{}");
+
   const { question: index } = useParams();
+
+  if (!questions[index]) {
+    const questionNumber = Object.keys(savedAnswers).length;
+    if (index > questions.length - 1) {
+      window.location.href = `#/question/${questionNumber}`;
+      window.location.reload();
+    } else if (index < 0) {
+      window.location.href = `#/question/0`;
+      window.location.reload();
+    }
+  }
+
   const currentQuestion = questions[index];
 
   const [answers, setAnswer] = useState(Utils.choices(questions, index));
@@ -39,10 +53,15 @@ const Questions = () => {
   };
 
   const confirmNumbers = () => {
+    const saved = JSON.parse(localStorage.getItem("customize") || "{}");
     const data = JSON.stringify({
-      ...JSON.parse(localStorage.getItem("customize") || "{}"),
+      ...saved,
       percentage,
       score: currentScore,
+      answers: {
+        ...saved.answers,
+        [index]: answers[clickedIndex],
+      },
     });
     localStorage.setItem("customize", data);
   };
@@ -52,11 +71,14 @@ const Questions = () => {
       setAnswer(Utils.choices(questions, index));
       setClickedIndex(-1);
     }
-    if (Number(index) === 0) {
-      setScore(0);
-      setPercentage(1 / questions.length);
-      confirmNumbers();
+    if (
+      savedAnswers[index] !== undefined &&
+      savedAnswers[0] !== savedAnswers[1]
+    ) {
+      setClickedIndex(answers.indexOf(savedAnswers[index]));
+      setIsCorrect(savedAnswers[index] === currentQuestion.correct_answer);
     }
+
     setCurrentIndex(index);
     // eslint-disable-next-line
   }, [currentIndex, index]);
