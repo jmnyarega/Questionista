@@ -55,9 +55,10 @@ const Questions = () => {
     setIsCorrect(correct);
     setPercentage((Number(index) + 1) / questions.length);
     correct && setScore(currentScore + 1);
+    confirmNumbers(answer);
   };
 
-  const confirmNumbers = () => {
+  const confirmNumbers = (answer: number) => {
     const saved = JSON.parse(localStorage.getItem("customize") || "{}");
     const data = JSON.stringify({
       ...saved,
@@ -65,7 +66,7 @@ const Questions = () => {
       score: currentScore,
       answers: {
         ...saved.answers,
-        [index]: answers[clickedIndex],
+        [index]: answers[answer],
       },
     });
     localStorage.setItem("customize", data);
@@ -132,17 +133,12 @@ const Questions = () => {
           <Link
             to={{ pathname: `/question/${Number(index) + 1}` }}
             className="btn content-btn"
-            onClick={confirmNumbers}
           >
             Next
           </Link>
         )}
         {Number(index) === questions.length - 1 && clickedIndex >= 0 && (
-          <Link
-            to={{ pathname: `/summary` }}
-            className="btn content-btn"
-            onClick={confirmNumbers}
-          >
+          <Link to={{ pathname: `/summary` }} className="btn content-btn">
             Submit
           </Link>
         )}
